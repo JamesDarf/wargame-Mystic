@@ -120,7 +120,7 @@
     <section class="hero-section mb-5">
         <div class="container text-center">
             <h1 class="main-title mb-3">Mystic</h1>
-            <p class="subtitle">BlackDragon & White Unicorn</p>
+            <p class="subtitle">purple dragon & White Unicorn</p>
             <div class="stream-tags mt-4">
                 <span class="stream-tag">#Black Dragon</span>
                 <span class="stream-tag">#Uni</span>
@@ -135,9 +135,9 @@
         <div class="row mb-5">
             <div class="col-12">
                 <div class="position-relative">
-                    <img src="/static/img/pic.png" alt="Mystic" class="img-fluid main-image w-100">
+                    <img src="/static/img/pic2.png" alt="Mystic" class="img-fluid main-image w-100">
                     <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center" style="background: linear-gradient(transparent, rgba(0,0,0,0.7));">
-                        <h2 class="h3">Fantastic World!!</h2>
+                        <h2 class="h3">the Mystical World! The sacred pieces are divided into three parts, each forming a unique world. </h2>
                     </div>
                 </div>
             </div>
@@ -149,12 +149,12 @@
                 <div class="feature-card kanna-card p-4 h-100">
                     <h3 class="text-center mb-4">BlackDragon</h3>
                     <div class="character-quote text-center">
-                        "용이 되어 하늘을 날고 싶었어요"
+                        "Sometimes, the purple dragon watches the header."
                     </div>
                     <div class="stats mt-4">
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-2">
-                                <span>드래곤 파워</span>
+                                <span>Dragon Power</span>
                                 <span>95%</span>
                             </div>
                             <div class="progress">
@@ -163,7 +163,7 @@
                         </div>
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-2">
-                                <span>게임 실력</span>
+                                <span>Gaming Skills</span>
                                 <span>90%</span>
                             </div>
                             <div class="progress">
@@ -177,12 +177,12 @@
                 <div class="feature-card uni-card p-4 h-100">
                     <h3 class="text-center mb-4">White Unicorn</h3>
                     <div class="character-quote text-center">
-                        "순수한 마음으로 여러분을 치유해드릴게요"
+                        "Unicorn love cookieeeee!"
                     </div>
                     <div class="stats mt-4">
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-2">
-                                <span>힐링 파워</span>
+                                <span>Healing Power</span>
                                 <span>100%</span>
                             </div>
                             <div class="progress">
@@ -191,7 +191,7 @@
                         </div>
                         <div class="mb-3">
                             <div class="d-flex justify-content-between mb-2">
-                                <span>귀여움</span>
+                                <span>CUT3</span>
                                 <span>100%</span>
                             </div>
                             <div class="progress">
@@ -202,31 +202,22 @@
                 </div>
             </div>
         </div>
-
-        <!-- Fan Art Section
-        <div class="fan-art-section mb-5">
-            <h3 class="text-center mb-4">etc...</h3>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img src="/api/placeholder/400/300" alt="팬아트 1" class="img-fluid rounded">
-                </div>
-                <div class="col-md-4">
-                    <img src="/api/placeholder/400/300" alt="팬아트 2" class="img-fluid rounded">
-                </div>
-                <div class="col-md-4">
-                    <img src="/api/placeholder/400/300" alt="팬아트 3" class="img-fluid rounded">
-                </div>
-            </div>
-        </div> -->
-
         <!-- Social Links -->
         <div class="text-center mb-5">
             <div class="social-links">
                 <a href="#" class="bi bi-twitter"></a>
-                <a href="#" class="bi bi-youtube"></a>
+                <a href="#" class="bi bi-youtube" id="youtube-link"></a>
                 <a href="#" class="bi bi-twitch"></a>
             </div>
         </div>
+
+        <script>
+            // YouTube 링크의 클릭 이벤트를 처리
+            document.getElementById('youtube-link').addEventListener('click', function(event) {
+                event.preventDefault(); // 기본 동작 방지 (페이지 이동 방지)
+                alert('flag1 is "SF{un1_c0rN_n"');
+            });
+        </script>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
