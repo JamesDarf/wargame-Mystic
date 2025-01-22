@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystic</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --kanna-color: #2E1F47;
+            --uni-color: #F5E6FF;
+            --accent-purple: #9B59B6;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--kanna-color), #16213e);
+            color: #fff;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .hero-section {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-title {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #fff, var(--uni-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            color: var(--uni-color);
+            font-size: 1.5rem;
+        }
+
+        .main-image {
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .kanna-card {
+            border-left: 4px solid var(--accent-purple);
+        }
+
+        .uni-card {
+            border-right: 4px solid var(--uni-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(155, 89, 182, 0.2);
+        }
+
+        .stream-tag {
+            background: rgba(155, 89, 182, 0.2);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 0.2rem;
+            display: inline-block;
+        }
+
+        .character-quote {
+            font-style: italic;
+            color: var(--uni-color);
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+
+        .progress {
+            height: 12px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .progress-bar-kanna {
+            background: linear-gradient(45deg, var(--accent-purple), var(--kanna-color));
+        }
+
+        .progress-bar-uni {
+            background: linear-gradient(45deg, var(--uni-color), #fff);
+        }
+
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-purple);
+        }
+
+        .fan-art-section {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section mb-5">
+        <div class="container text-center">
+            <h1 class="main-title mb-3">Mystic</h1>
+            <p class="subtitle">BlackDragon & White Unicorn</p>
+            <div class="stream-tags mt-4">
+                <span class="stream-tag">#Black Dragon</span>
+                <span class="stream-tag">#Uni</span>
+                <span class="stream-tag">#Mystic</span>
+                <span class="stream-tag">#corn</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Image -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="position-relative">
+                    <img src="/static/img/pic.png" alt="Mystic" class="img-fluid main-image w-100">
+                    <div class="position-absolute bottom-0 start-0 w-100 p-4 text-center" style="background: linear-gradient(transparent, rgba(0,0,0,0.7));">
+                        <h2 class="h3">Fantastic World!!</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Character Cards -->
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="feature-card kanna-card p-4 h-100">
+                    <h3 class="text-center mb-4">BlackDragon</h3>
+                    <div class="character-quote text-center">
+                        "용이 되어 하늘을 날고 싶었어요"
+                    </div>
+                    <div class="stats mt-4">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>드래곤 파워</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-kanna" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>게임 실력</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-kanna" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="feature-card uni-card p-4 h-100">
+                    <h3 class="text-center mb-4">White Unicorn</h3>
+                    <div class="character-quote text-center">
+                        "순수한 마음으로 여러분을 치유해드릴게요"
+                    </div>
+                    <div class="stats mt-4">
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>힐링 파워</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-uni" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>귀여움</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-uni" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fan Art Section
+        <div class="fan-art-section mb-5">
+            <h3 class="text-center mb-4">etc...</h3>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <img src="/api/placeholder/400/300" alt="팬아트 1" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="/api/placeholder/400/300" alt="팬아트 2" class="img-fluid rounded">
+                </div>
+                <div class="col-md-4">
+                    <img src="/api/placeholder/400/300" alt="팬아트 3" class="img-fluid rounded">
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Social Links -->
+        <div class="text-center mb-5">
+            <div class="social-links">
+                <a href="#" class="bi bi-twitter"></a>
+                <a href="#" class="bi bi-youtube"></a>
+                <a href="#" class="bi bi-twitch"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

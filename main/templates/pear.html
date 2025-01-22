@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEAR</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #F4F0EB;
+            color: #2C2C2C;
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            background: #E6B17E;
+            border-radius: 50%;
+            pointer-events: none;
+            transition: transform 0.1s;
+            z-index: 9999;
+            mix-blend-mode: difference;
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pear-shape {
+            position: absolute;
+            width: 60vh;
+            height: 60vh;
+            background: #E6B17E;
+            border-radius: 50% 25% 25% 25%;
+            transform: rotate(-45deg);
+            transition: all 0.5s ease;
+        }
+
+        .title-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .main-title {
+            font-size: 12vw;
+            font-weight: 900;
+            letter-spacing: -5px;
+            color: #2C2C2C;
+            mix-blend-mode: overlay;
+        }
+
+        .scroll-section {
+            height: 300vh;
+            position: relative;
+        }
+
+        .sticky-container {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .horizontal-scroll {
+            display: flex;
+            gap: 2vw;
+            padding: 0 5vw;
+            transform: translateX(calc(var(--scroll) * 1%));
+        }
+
+        .pear-card {
+            min-width: 50vw;
+            height: 70vh;
+            background: #fff;
+            border-radius: 30px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pear-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: #E6B17E;
+            border-radius: 50%;
+            opacity: 0.1;
+        }
+
+        .card-title {
+            font-size: 5vw;
+            font-weight: 900;
+            margin-bottom: 2rem;
+        }
+
+        .floating-text {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            font-size: 1rem;
+            opacity: 0.5;
+        }
+
+        .taste-section {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: #2C2C2C;
+        }
+
+        .taste-cell {
+            background: #F4F0EB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .taste-cell:hover {
+            background: #E6B17E;
+            color: #fff;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-pear {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-follower"></div>
+
+    <section class="hero-section">
+        <div class="pear-shape"></div>
+        <div class="title-container text-center">
+            <h1 class="main-title">ldH</h1>
+            <p class="lead">나는 배보다 사과가 좋아....</p>
+        </div>
+    </section>
+
+    <section class="scroll-section">
+        <div class="sticky-container">
+            <div class="horizontal-scroll">
+                <div class="pear-card">
+                    <h2 class="card-title">Taste</h2>
+                    <p class="display-4">달콤한 과즙이<br>터지는 순간</p>
+                </div>
+                <div class="pear-card">
+                    <h2 class="card-title">Texture</h2>
+                    <p class="display-4">아삭한 식감의<br>예술</p>
+                </div>
+                <div class="pear-card">
+                    <h2 class="card-title">Nature</h2>
+                    <p class="display-4">자연이 준<br>선물</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="taste-section">
+        <div class="taste-cell">달콤함</div>
+        <div class="taste-cell">신선함</div>
+        <div class="taste-cell">부드러움</div>
+        <div class="taste-cell">즐거움</div>
+    </section>
+
+    <div class="floating-text">Scroll & Explore</div>
+
+    <script>
+        // 마우스 커서 효과
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.querySelector('.cursor-follower');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // 스크롤 효과
+        window.addEventListener('scroll', () => {
+            const scrollSection = document.querySelector('.scroll-section');
+            const horizontalScroll = document.querySelector('.horizontal-scroll');
+            
+            const scrollPercentage = (window.scrollY - scrollSection.offsetTop) / (scrollSection.offsetHeight - window.innerHeight) * 100;
+            horizontalScroll.style.transform = `translateX(${-scrollPercentage}%)`;
+
+            // 배 모양 회전
+            const pearShape = document.querySelector('.pear-shape');
+            pearShape.style.transform = `rotate(${-45 + scrollPercentage/2}deg)`;
+        });
+    </script>
+</body>
+</html>
