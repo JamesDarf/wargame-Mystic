@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Scores Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .navbar {
+            background-color: #007bff;
+            padding: 10px 20px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .navbar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header div {
+            flex: 1;
+        }
+
+        .block {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .block > div {
+            flex: 1;
+            background: #e8e8e8;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .block h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .block span {
+            display: block;
+            margin: 10px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .block .details {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .block .details ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .block .details ul li {
+            padding: 5px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .highlight {
+            font-size: 30px;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>App Dashboard</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#scores">Scores</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#activities">Activities</a></li>
+        </ul>
+    </div>
+
+    <!--container_1-->
+    <div class="container">
+        <div class="header">
+            <div>
+                <h2>App Scores</h2>
+                <p>Security Score: <span class="highlight">13/100</span></p>
+                <p>Trackers Detected: <span class="highlight">3/407</span></p>
+            </div>
+            <div>
+                <h2>File Information</h2>
+                <p>File Name: <b>InsecureBankV2.apk</b></p>
+                <p>Size: <b>3.3MB</b></p>
+                <p>SHA256: <b>b18af2a0...</b></p>
+            </div>
+        </div>
+
+        <div class="block">
+            <div>
+                <h3>Activities</h3>
+                <span>10</span>
+                <div class="details">
+                    <ul>
+                        <li>Exported Activities: 4</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <h3>Receivers</h3>
+                <span>2</span>
+                <div class="details">
+                    <ul>
+                        <li>Exported Receivers: 1</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--container_2-->
+    <div class="container">
+
+        <div>
+            <p>data 입니다..............</p>
+            <button id="details">더보기</button>
+        </div>
+    </div> <!--container_2-->
+
+</body>
+</html>

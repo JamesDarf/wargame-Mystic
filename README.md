@@ -1,5 +1,8 @@
 # [wargame] Mystic
 
+### Difficulty
+easy
+
 ### explan
 this is wargame using the DevTools
 
